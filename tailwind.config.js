@@ -21,7 +21,7 @@ module.exports = {
         'background': '#fff',
         'backgroundBlue': '#F6FAFF',
         'backgroundFooter': '#0A2530',
-        'base': '#000000',
+        'black': '#000000',
         'primary': '#FAE01A',
         'yellow-opacity': '#FFF7BE',
         'secondary': '#018FA3',

@@ -26,6 +26,7 @@
     }
     html {
         font-family: "Commissioner", system-ui, sans-serif;
+        @apply text-base leading-base text-black bg-background;
     }
     b,strong {
         font-family: "Commissioner-Bold", system-ui, sans-serif;
