@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Commissioner';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(./fonts/Commissioner-Regular.ttf) format('ttf');
+    }
+    @font-face {
+        font-family: 'Commissioner-Medium';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(./fonts/Commissioner-Medium.ttf) format('ttf');
+    }
+    @font-face {
+        font-family: 'Commissioner-Bold';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(./fonts/Commissioner-Bold.ttf) format('ttf');
+    }
+    html {
+        font-family: "Commissioner", system-ui, sans-serif;
+    }
+    b,strong {
+        font-family: "Commissioner-Bold", system-ui, sans-serif;
+    }
+}
