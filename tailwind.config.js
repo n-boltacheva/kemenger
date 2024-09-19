@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./docs/*.html"],
+  content: [
+      "./docs/*.{html,js}",
+      "./src/**/*.{ts,tsx}"
+  ],
   theme: {
     fontFamily: {
       'display': ['Commissioner'],
