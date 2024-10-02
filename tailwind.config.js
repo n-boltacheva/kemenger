@@ -1,7 +1,9 @@
+
 module.exports = {
   content: [
       "./docs/*.{html,js}",
-      "./src/**/*.{ts,tsx}"
+      "./src/**/*.{ts,tsx}",
+      "./src/**/*.{png}"
   ],
   theme: {
     fontFamily: {
@@ -25,9 +27,9 @@ module.exports = {
         'backgroundBlue': '#F6FAFF',
         'backgroundFooter': '#0A2530',
         'black': '#000000',
-        'primary': '#FAE01A',
+        'primary': 'rgb(var(--color-primary))',
         'yellow-opacity': '#FFF7BE',
-        'secondary': '#018FA3',
+        'secondary': 'rgb(var(--color-secondary))',
         'blue-opacity': '#95D8E0',
         'third': '#955EEA',
         'fourth': '#4ECA30',
@@ -35,6 +37,13 @@ module.exports = {
         'sixth': '#FF4D94',
         'seventh': '#FFA724',
       },
+      textShadow: {
+        'secondary': '-31px -25px rgba(var(--color-secondary), 0.07)'
+      },
+      flexBasis: {
+        '3/7': '42.8571429%',
+        '4/7': '57.1428571%',
+      }
     },
   },
   plugins: [],

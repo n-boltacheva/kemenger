@@ -1,4 +1,4 @@
-import {Menu} from '@features';
+import {About, Menu} from '@features';
 import  { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
         <div className="content">
 
             <Routes>
-                <Route path="/" element={<div className={'flex'}>welcome</div>}/>
+                <Route path="/" element={<About/>}/>
             </Routes>
         </div>
     </HashRouter>

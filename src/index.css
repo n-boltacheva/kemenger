@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --color-primary: 250, 224, 26;
+        --color-secondary: 1, 143, 163;
+    }
     @font-face {
         font-family: 'Commissioner';
         font-style: normal;
