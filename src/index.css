@@ -30,7 +30,8 @@
     }
     html {
         font-family: "Commissioner", system-ui, sans-serif;
-        @apply text-base leading-base font-normal text-black bg-background;
+        @apply text-base leading-base font-normal text-black bg-background relative;
+        overflow-x: hidden;
     }
     b,strong {
         font-family: "Commissioner-Bold", system-ui, sans-serif;
