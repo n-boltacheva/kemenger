@@ -5,7 +5,7 @@ import {Button} from "@shared";
 import icon from "./icon.png"
 
 type Props = {
-    onSubmit: (values: any) => Promise<boolean>;
+    onSubmit: (values: unknown) => Promise<boolean>;
     title?: string|React.ReactNode;
 };
 export default function RequestForm(props: Props) {

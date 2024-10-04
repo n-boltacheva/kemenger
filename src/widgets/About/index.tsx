@@ -11,7 +11,7 @@ export default function AboutWidget(props: Props) {
 
     const [openOverlay, setOpenOverlay] = React.useState(false);
 
-    function onSubmit(values: any) {
+    function onSubmit(values: unknown) {
         return Promise.resolve().then(() => {
             setTimeout(()=>setOpenOverlay(false), 3000);
             return true;
