@@ -1,6 +1,6 @@
-// @About
+// @Home
 import * as React from 'react';
-import {About} from "@features";
+import {About, Home} from "@features";
 import {Overlay} from "@shared";
 import {RequestForm} from "@entities";
 
@@ -13,19 +13,19 @@ export default function AboutWidget(props: Props) {
 
     function onSubmit(values: unknown) {
         return Promise.resolve().then(() => {
-            setTimeout(()=>setOpenOverlay(false), 3000);
             return true;
         })
     }
 
     return (
         <>
-            <About onClickButton={()=>setOpenOverlay(true)}/>
+            <Home onClickButton={()=>setOpenOverlay(true)}/>
             {openOverlay && <Overlay onClose={()=>setOpenOverlay(false)}>
                 <RequestForm title={<p>Заполните <span className={'text-secondary'}>форму</span>
                     <br/>и мы обязательно
                     <br/>свяжемся с Вами.</p>} onSubmit={onSubmit}/>
                 </Overlay>}
+            <About/>
         </>
     );
 };
