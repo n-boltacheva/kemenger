@@ -8,5 +8,6 @@ type Props = {
 };
 export default function CanvasImg(props: Props) {
 
-    return <img src={props.img} style={{clipPath: 'polygon(50% 0%, 100% 0, 100% 50%, 100% 96%, 67% 95%, 47% 97%, 31% 100%, 0 100%, 0 50%, 0 0)'}} className={props.className}/>
+    return <img src={props.img} className={props.className}
+                style={{clipPath: 'polygon(50% 0%, 100% 0, 100% 50%, 100% 96%, 67% 95%, 47% 97%, 31% 100%, 0 100%, 0 50%, 0 0)'}} />
 }
