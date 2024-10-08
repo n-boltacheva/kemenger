@@ -1,6 +1,6 @@
 // @Horizontal Card
 import * as React from 'react';
-import {Circles} from "@entities";
+import {CanvasBorder, Circles} from "@entities";
 
 type Props = {
     reverse?: true;
@@ -15,15 +15,16 @@ type Props = {
 
 export default function HorizontalCard(props: Props) {
     return (
-        <div className={`flex flex-wrap flex-col ${props.reverse?'md:flex-row-reverse':'md:flex-row'} gap-10 md:gap-24 items-center`}>
-            <div className={`relative basis-2/5 ${props.reverse?'mr-20':'ml-20 h-max'}`}>
+        <div className={`flex flex-col ${props.reverse?'md:flex-row-reverse':'md:flex-row'} gap-10 xl:gap-24 lg:gap-20 items-center px-2.5`}>
+            <div className={`relative basis-2/5 ${props.reverse?'lg:mr-20 sm:mr-5':'lg:ml-20 sm:ml-5 h-max'}`}>
                 <div className={'bg-yellow-opacity w-full h-full absolute z-10 rounded-xl md:rounded-3xl'}></div>
-                <p className={'md:text-base text-md relative top-4 -left-6 z-20'}>{props.text}</p>
+                <p className={'md:text-base text-md relative md:top-4 md:-left-6 top-1 -left-1 z-20'}>{props.text}</p>
                 <Circles<false> width={201} height={200} {...props.circle} />
             </div>
-            <div className={'relative border-8 border-secondary border-dashed rounded-xl md:rounded-3xl'}>
+            <div className={'relative'}>
+                <CanvasBorder/>
                 <img src={props.img}
-                     className={`relative -top-4 ${props.reverse?'left-3':'right-3'} rounded-xl md:rounded-3xl'}`}/>
+                     className={`relative -top-4 ${props.reverse?'left-3':'right-3'} rounded-3xl'}`}/>
             </div>
         </div>
     );
