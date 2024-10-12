@@ -51,7 +51,7 @@ export default function Menu(props: Props) {
 
     return (
         <nav
-            className="flex justify-around items-center sticky top-0 bg-transparent gap-2 z-30"  style={{backgroundColor:flagBackground?'#fff':'transparent'}}>
+            className="flex justify-around items-center sticky top-0 bg-transparent gap-2 z-30 w-full"  style={{backgroundColor:flagBackground?'#fff':'transparent'}}>
             <div className="flex items-center">
                 <Link link={'/'}><img src={logo} className={'w-10 sm:w-[4.3rem]'}/></Link>
             </div>

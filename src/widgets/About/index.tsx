@@ -1,6 +1,6 @@
 // @Home
 import * as React from 'react';
-import {About, Home} from "@features";
+import {About, Directions, Home} from "@features";
 import {Overlay} from "@shared";
 import {RequestForm} from "@entities";
 
@@ -26,6 +26,7 @@ export default function AboutWidget(props: Props) {
                     <br/>свяжемся с Вами.</p>} onSubmit={onSubmit}/>
                 </Overlay>}
             <About/>
+            <Directions/>
         </>
     );
 };

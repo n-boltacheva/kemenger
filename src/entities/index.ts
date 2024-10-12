@@ -5,3 +5,5 @@ export {default as RequestForm} from './RequestForm';
 export {default as HorizontalCard} from './HorizontalCard';
 export {default as Circles} from './CanvasCircle';
 export {default as CanvasBorder} from './CanvasBorder';
+export {default as Direction} from './Direction';
+export {default as DirectionImg} from './DirectionImg';
