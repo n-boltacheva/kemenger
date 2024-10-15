@@ -8,8 +8,8 @@ type Props = {
     img: string;
     circle: {
         left?:true,
-        colorBig: string,
-        colorSmall: string
+        varColorBig: string,
+        varColorSmall: string
     }
 };
 

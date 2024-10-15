@@ -8,7 +8,7 @@ interface BigCircle {
 }
 
 interface propsCircle {
-    colorBig: string,
+    varColorBig: string,
     left?: true
     width: number,
     height: number,
@@ -18,7 +18,7 @@ interface propsCircle {
 }
 
 interface SmallCircle {
-    colorSmall: string
+    varColorSmall: string
 }
 
 type Props<T extends boolean> = T extends true ? BigCircle : SmallCircle;
@@ -48,8 +48,9 @@ export default function CanvasCircle<T extends boolean>(props: Props<T> & propsC
         if(refSmall.current?.getContext) {
             const ctx = refSmall.current.getContext("2d");
             if (ctx) {
+                const canvas = ctx.canvas
                 ctx.beginPath();
-                ctx.fillStyle = (props as SmallCircle).colorSmall;
+                ctx.fillStyle = "rgb(" + getComputedStyle(canvas).getPropertyValue((props as SmallCircle).varColorSmall) + ')';
                 ctx.strokeStyle = ctx.fillStyle;
                 ctx.moveTo(wh.width - 25, (wh.height - 25)/2 + 0.6186);
                 ctx.bezierCurveTo(wh.width - 25, wh.height - 25 - (wh.height - 25)/4 + 0.722, wh.width - 25 - (wh.width - 25)/4 - 0.79, wh.height - 25, (wh.width - 25)/2 - 0.7557, wh.height - 25);
@@ -64,8 +65,9 @@ export default function CanvasCircle<T extends boolean>(props: Props<T> & propsC
         if(refBig.current?.getContext) {
             const ctx = refBig.current.getContext("2d");
             if (ctx) {
+                const canvas = ctx.canvas
                 ctx.beginPath();
-                ctx.fillStyle = props.colorBig;
+                ctx.fillStyle = "rgb(" + getComputedStyle(canvas).getPropertyValue(props.varColorBig) + ')';
                 ctx.strokeStyle = ctx.fillStyle;
                 ctx.moveTo(wh.width, wh.height/2 + 0.707);
                 ctx.bezierCurveTo(wh.width, wh.height - wh.height/4 + 0.825, wh.width - wh.width/4 - 0.90, wh.height, wh.width/2 - 0.863, wh.height);

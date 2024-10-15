@@ -15,8 +15,9 @@ export default function CanvasBorder(props: Props) {
             if(ctxBorder) {
                 const width = refBorder.current.clientWidth-188;
                 const height = refBorder.current.clientHeight-192;
+                const canvas = ctxBorder.canvas
                 ctxBorder.beginPath();
-                ctxBorder.fillStyle = 'rgb(1 143 163)';
+                ctxBorder.fillStyle = "rgb(" + getComputedStyle(canvas).getPropertyValue('--color-secondary') + ')';
                 ctxBorder.strokeStyle = ctxBorder.fillStyle;
                 ctxBorder.lineWidth = 2
                 ctxBorder.setLineDash([15, 5]);

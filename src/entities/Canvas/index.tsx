@@ -16,8 +16,9 @@ export default function Canvas(props: Props) {
             const ctxBorder = refBorder.current.getContext("2d");
             if(ctx) {
 
+                const canvas = ctx.canvas
                 ctx.beginPath();
-                ctx.fillStyle = 'rgb(250, 224, 26)';
+                ctx.fillStyle = "rgb(" + getComputedStyle(canvas).getPropertyValue('--color-primary') + ')';
                 ctx.strokeStyle = ctx.fillStyle;
                 // Outer shape clockwise ⟳
                 ctx.moveTo(616, 0);

@@ -5,7 +5,9 @@
 @layer base {
     :root {
         --color-primary: 250, 224, 26;
+        --color-primary-light: 255, 247, 190;
         --color-secondary: 1, 143, 163;
+        --color-secondary-light: 149, 216, 224;
     }
     @font-face {
         font-family: 'Commissioner';
